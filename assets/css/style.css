@@ -2,54 +2,76 @@
 @keyframes sexy {
  
   from {
-    background: linear-gradient(to right, white 0%, DarkOliveGreen 100%);
+    background: linear-gradient(to right, MidnightBlue0%, white 100%);
     color: black;
-    border: 3px solid aqua;
     background-blend-mode: color-dodge;
     text-align: center;
   }
   to {
-    background: linear-gradient(to right, DarkOliveGreen 0%, white 100%);
+    background: linear-gradient(to right, white 0%, MidnightBlue 100%);
     color: white;
-    border: 3px dotted aqua;
     text-align: center;
   }
 }
 
 .sexy {
-  animation: sexy 5s forwards;
+  animation: sexy 4s forwards;
+}
+
+
+
+@keyframes sexySuper {
+ 
+  from {
+    background: linear-gradient(to right, white 0%, MidnightBlue 100%);
+    color: black;
+    background-blend-mode: color-dodge;
+    width: 100%;
+    height: 100%;
+    
+  }
+  to {
+    background: linear-gradient(to right, MidnightBlue 0%, white 100%);
+    color: white; 
+    width: 100%;
+    height: 100%;
+   }
+};
+
+.sexySuper {
+  animation: sexySuper 4s forwards;
 }
 
 .panel{
-border: 5px solid orange;
-}
+border: 5px solid black;
+background-image: url("../images/background.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+};
 
 .btn-group{
-border: 6px dotted DarkGoldenRod;
-}
+
+};
 
 .divIt { 
-  background-image: linear-gradient(to right, DarkOliveGreen 0%,white 100%);
+  background-image: linear-gradient(to right, red 0%,white 100%);
   background-blend-mode: color-dodge;
 }
 
 .touchDiv {
-  background-image: linear-gradient(to right, white 0%, DarkOliveGreen 100%);
+  background-image: linear-gradient(to right, white 0%, MidnightBlue 100%);
   background-blend-mode: color-dodge;
 }
-	
-}
-#panel-title { 
-  background-repeat:no-repeat;
-  background-image: linear-gradient(to right, yellow 0%, DarkOliveGreen 100%);
-  background-blend-mode: color-dodge;
-}
+
 
 
 body {
+	background-image: url("../images/panelBG.jpg");
 	background-repeat:no-repeat;
-	background-size: 75%;
+	background-size: cover;
 	background-position: center;
+}
 
 h1 { 
 	text-align: center;
@@ -62,12 +84,12 @@ h1 {
 p {
 	margin: 3px; 
     padding: 3px;
-    border: 2px solid DarkGoldenRod;
+    border: 2px solid orange;
 }
 
-p:hover{
-	background-color: teal;
-	border: 2px solid Peru; 
+#hoverPic: hover {
+	background-color: yellow;
+	border: 2px solid red; 
 }
 
 
@@ -102,3 +124,9 @@ p:hover{
 }
 
 
+#gemrow{
+	margin: 5px;
+	padding: 5px;
+	max-width: 100%
+	height: 150px;
+}
