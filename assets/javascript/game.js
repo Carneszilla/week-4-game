@@ -10,7 +10,7 @@ $(document).ready(function () {
 	var scoreNow = 0;
 
 	// the random number created for game to even start/
-	var scoreToMeet = 0
+	var scoreToMeet = 0;
 
 	var wins = 0;
 	var losses = 0;
@@ -37,29 +37,33 @@ $(document).ready(function () {
 		moonNum = 0;
 		sunNum = 0;
 		givenScore(); // function created row 122
-		//pulled from html row 99
-		$("#buttonReset").hide();
+		
 		//pulled from html row 103 
 		$("#gemRow").show();
 		imgPic(); // function created row 66
 	};
+	playAgain();
 	//TRYING TO CREATE A RESET BUTTON
-	// function playAgain() {
-	// 	//When the button is clicked, the following will occur. It will set the following values to 0, call the given score function, and hide the div with the gems, for a cleaner look.
-	// 	$("#buttonReset").click(function () {
-	// 		scoreToMeet = 0;
-	// 		scoreNow = 0;
-	// 		rocketShipNum = 0;
-	// 		spaceManNum = 0;
-	// 		moonNum = 0;
-	// 		sunNum = 0;
-	// 		givenScore(); // function created row 122
-	// 		$("#buttonReset").hide(); //pulls index.html row 99
-	// 		$("#gemRow").show(); // pulls index.html row 103 
-	// 		imgPic(); // function created row 66
-	// 	});
-	// };
+	function playAgain() {
+		//When the button is clicked, the following will occur. It will set the following values to 0, call the given score function, and hide the div with the gems, for a cleaner look.
+		$("#buttonReset").click(function () {
+			console.log("Your points number still shows a number but it is really 0, go ahead click a image and see")
+			scoreToMeet = 0;
+			scoreNow = 0;
+			rocketShipNum = 0;
+			spaceManNum = 0;
+			moonNum = 0;
+			sunNum = 0;
 
+			console.log("whats happening")
+			givenScore(); // function created row 122
+			console.log("whats happening")
+			$("#buttonReset").show(); //pulls index.html row 99
+			$("#gemRow").show(); // pulls index.html row 103 
+			imgPic(); // function created row 66
+		});console.log("whats happening")
+	};
+       
 	// // function imgPic creates a randon number 1-12
 	function imgPic() {
 		var crystalPluto = Math.floor(Math.random() * 12 + 1);
@@ -149,3 +153,5 @@ $(document).ready(function () {
 	//This will call the givenScore function.
 	givenScore();
 });
+
+// nice new stuff 
