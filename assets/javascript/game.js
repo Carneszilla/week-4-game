@@ -88,7 +88,6 @@ $(document).ready(function () {
 		var imgDataValue = parseInt($(this).attr("data-imgValue"))
 
 		scoreNow += imgDataValue;
-		console.log(scoreNow)
 		$("#scoreNow").text("Your score: " + scoreNow)
 		if (scoreNow > scoreToMeet) {
 			losses++;
@@ -113,7 +112,7 @@ $(document).ready(function () {
 	function scoreKeeper() {
 		if (scoreNow > scoreToMeet) {
 			losses++;
-			$("#losses").html('Losses: ' + losses);
+			$("#losses").html('Losses: ' + losses + " " + "You get NOTHING!!!");
 			resetGame();
 			$("#buttonReset").show();
 			$("#gemRow").hide();
@@ -122,7 +121,7 @@ $(document).ready(function () {
 
 		if (scoreNow === scoreToMeet) {
 			wins++;
-			$("#wins").html('Wins: ' + wins);
+			$("#wins").html('Wins: ' + wins + " " +"Look at you so fancy");
 			resetGame();
 			$("#buttonReset").show();
 			$("#gemRow").hide();
